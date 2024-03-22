@@ -134,8 +134,6 @@ let getOddNumbers = function (array: number[]): number[] {
 }
 
 let arrayRetornado: number[] = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]);
-arrayPrinter(arrayRetornado);
-
 console.log(arrayRetornado)
 /*
   07
@@ -143,7 +141,7 @@ console.log(arrayRetornado)
   - Forme uma frase com o array abaixo e exiba-a no console.
 */
 
-const functions: (() => string)[] = [
+const funcoes: (() => string)[] = [
     function () { return 'Plymouth' },
     function () { return 'é' },
     function () { return 'uma' },
@@ -160,7 +158,7 @@ const functions: (() => string)[] = [
     function () { return 'do' },
     function () { return 'Reino' },
     function () { return 'Unido' },
-    function () { return 'localizado' },
+    function () { return 'localizada' },
     function () { return 'na' },
     function () { return 'cadeia' },
     function () { return 'de' },
@@ -172,14 +170,16 @@ const functions: (() => string)[] = [
     function () { return 'Antilhas,' },
     function () { return 'Índias' },
     function () { return 'Ocidentais.' }
-];
-
-let functionsString: string = '';
-for (let i = 0; i < functions.length; i++) { functionsString += functionsi + ' '; }
-
-console.log(functionsString);
-
-
+  ];
+  
+  let fraseCompleta: string = '';
+  
+  // Percorra o array de funções e concatene o resultado de cada chamada (valor retornado)
+  for (let i = 0; i < funcoes.length; i++) {
+    fraseCompleta += funcoes[i]() + ' '; // Chame a função e adicione espaço
+  }
+  
+  console.log(fraseCompleta);
 
 /*
   08
@@ -244,7 +244,7 @@ console.log('O índice foi encontrado na posição: ' + findIndex('a', 'Coca Col
     passado por argumento existe no array (também passado por argumento).
 */
 
-let itemBuscado: string = 'HBOMax';
+let itemBuscado01: string = 'HBOMax';
 let itemBuscado: string = 'AppleTV';
 let streamingNames: string[] = ['Netflix', 'Spotify', 'PrimeVideo', 'Star+', 'HBOMax'];
 let encontrado: boolean = false;
